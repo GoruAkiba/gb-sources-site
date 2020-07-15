@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>GB_Sources</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Bootstrap init -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <!-- Bootstrap end -->
+        
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body class="bg-dark text-white" onload="social()">
+        <div class="container">
+            <div class="container col-md-4">
+                <div class="branding-img container mt-5" style="text-align: center;">
+                    <img src="https://4.bp.blogspot.com/-AbJ1au7SfYc/XEHifQKXZWI/AAAAAAAAA5I/beXM7mmhipUNkWUq0zwEmJjOtdg-XZoRgCK4BGAYYCw/s320/chanel%2Bart.png" alt="GB_Sources" id="header">
+                    <!-- <h1 class="text-lg">GB_Sources</h1> -->
+                </div>
+                <div id="social"></div>
+            </div>
+        </div>
+        <script>
+
+            function social(){
+                var target = document.getElementById("social");
+                var ar = [
+                    {
+                        name:"Github",
+                        username:"@GoruAkiba",
+                        url:"https://github.com/GoruAkiba",
+                        img: "images/GitHub-Mark-Light-64px.png"
+                    },
+                    {
+                        name:"Discord",
+                        username:"tomokaTakeda#3749",
+                        url:"#",
+                        img: "images/Discord-Logo-White.png"
+                    },
+                    {
+                        name:"instagram",
+                        username:"@gueroehtgb",
+                        url:"https://www.instagram.com/gueroehtgb/",
+                        img: "/images/IG_Glyph_Fill.png"
+                    },
+                    {
+                        name:"twitter",
+                        username:"@Gueroeh_GB",
+                        url:"https://twitter.com/Gueroeh_GB",
+                        img: "images/Twitter_Social_Icon_Circle_White.png"
+                    }
+                ];
+
+                ar.map(e=>{
+                    target.innerHTML += `
+                        <a href="${e.url}" class="inblk">
+                            <div class="social" style="background-image:url(${e.img})" data-toggle="tooltip" data-placement="bottom" title="GB_Sources ${e.name}\n${e.username}">
+                            </div>
+                        </a>
+                    `
+                })
+
+                $('[data-toggle="tooltip"]').tooltip()
+            }
+        </script>
+    </body>
+</html>

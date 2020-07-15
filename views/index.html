@@ -9,7 +9,11 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
         <!-- Bootstrap end -->
-        
+
+        <!-- Typed begin -->
+        <script src="/js/typed.js"></script>
+        <link rel="stylesheet" href="/css/default.min.css">
+        <!-- Typed End -->
         <link rel="stylesheet" href="/css/style.css">
     </head>
     <body class="bg-dark text-white" onload="social()">
@@ -20,6 +24,9 @@
                     <!-- <h1 class="text-lg">GB_Sources</h1> -->
                 </div>
                 <div id="social"></div>
+                <div>
+                    <span id="copy"></span>
+                </div>
             </div>
         </div>
         <script>
@@ -62,7 +69,31 @@
                     `
                 })
 
-                $('[data-toggle="tooltip"]').tooltip()
+                $('[data-toggle="tooltip"]').tooltip();
+
+                // typed
+                var copyright = "Copyright GB_Sources - 2020",
+                    typ = [
+                    `${copyright}<br>. C:\\\\user\\GB_Sources:>_ test`,
+                    `${copyright}<br>. C:\\\\user\\GB_Sources:>_`,
+                    `${copyright}<br>. C:\\\\user\\GB_Sources:>_ echo off`,
+                    `${copyright}<br> just common website!`,
+                    `${copyright}<br> dont forget visit to my GitHub!`,
+                    `${copyright}<br> follow my twitter!`,
+                    `${copyright}<br> follow my instagram!`,
+                    `${copyright}<br> add me on discord!`,
+                    `Enjoy my thread!`
+
+
+                ];
+                var typed3 = new Typed('#copy', {
+                    strings: typ,
+                    typeSpeed: 45,
+                    backSpeed: 20,
+                    backDelay: 1000,
+                    smartBackspace: true, // this is a default
+                    loop: true
+                });
             }
         </script>
     </body>

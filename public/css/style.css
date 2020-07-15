@@ -88,6 +88,6 @@ h1{
 
 @keyframes flash {
     29% { filter: invert(1);}
-    30% { filter: invert(0);}
+    31% { filter: invert(0);}
     32% { filter: invert(1);}
 }

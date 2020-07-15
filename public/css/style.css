@@ -45,6 +45,9 @@ h1{
     font-size: 11px;
     font-family: 'Courier New', Courier, monospace;
     color: darkgrey;
+
+    /* animation: flash 0.75s;
+    animation-iteration-count: infinite; */
 }
 
 .social{
